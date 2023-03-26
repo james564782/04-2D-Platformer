@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Area2D
+
+var CameraNode
+
+func _ready():
+	CameraNode = get_node_or_null(\"/root/Scene/ComplexCamera\")
+
+func get_extents(): #extents represent the distance from the center/radius
+	var vector =  $Zone.shape.extents
+	return vector
+
+func get_position():
+	return $Zone.global_position
+
+func _on_CameraZone_body_entered(body):
+	if body.name == \"Player\":
+		print(\"detected player in \" + name)
+		if not CameraNode == null:
+			CameraNode.set_camera_zone(self)
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 272, 192 )
+
+[node name="CameraZone" type="Area2D"]
+collision_layer = 64
+collision_mask = 64
+script = SubResource( 1 )
+
+[node name="Zone" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_CameraZone_body_entered"]

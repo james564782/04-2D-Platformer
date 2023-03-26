@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/RedoneHealthBar.png" type="Texture" id=1]
+[ext_resource path="res://UI/UI.gd" type="Script" id=2]
+[ext_resource path="res://Assets/HyperspaceBold.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 3 )
+
+[node name="UI" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Health_Bar" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Color" type="Control" parent="Health_Bar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Bar_Back" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 56.0
+margin_top = 20.0
+margin_right = 312.0
+margin_bottom = 44.0
+color = Color( 0.247059, 0.172549, 0.372549, 1 )
+
+[node name="Bar_Front" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 56.0
+margin_top = 20.0
+margin_right = 312.0
+margin_bottom = 44.0
+color = Color( 0.411765, 0.501961, 0.619608, 1 )
+
+[node name="Heart0" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 20.0
+margin_bottom = 32.0
+color = Color( 0.584314, 0.772549, 0.67451, 1 )
+
+[node name="Heart1" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 44.0
+margin_bottom = 32.0
+color = Color( 0.584314, 0.772549, 0.67451, 1 )
+
+[node name="Heart2" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 32.0
+margin_bottom = 32.0
+color = Color( 0.584314, 0.772549, 0.67451, 1 )
+
+[node name="Heart3" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 12.0
+margin_top = 32.0
+margin_right = 40.0
+margin_bottom = 40.0
+color = Color( 0.584314, 0.772549, 0.67451, 1 )
+
+[node name="Heart4" type="ColorRect" parent="Health_Bar/Color"]
+margin_left = 20.0
+margin_top = 40.0
+margin_right = 32.0
+margin_bottom = 48.0
+color = Color( 0.584314, 0.772549, 0.67451, 1 )
+
+[node name="Frame" type="TextureRect" parent="Health_Bar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -704.0
+margin_bottom = -536.0
+texture = ExtResource( 1 )
+expand = true
+
+[node name="Score" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -171.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 1 )
+text = "Score:"
+valign = 1

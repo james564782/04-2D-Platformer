@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.stex"
+path="res://.import/Small Enemy Projectile.png-e55a24ab0fa4c80692343f9649772722.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background.png"
-dest_files=[ "res://.import/Background.png-35d93eb57723ae0fb58ad0b59abe54b6.stex" ]
+source_file="res://Sprites/Small Enemy Projectile.png"
+dest_files=[ "res://.import/Small Enemy Projectile.png-e55a24ab0fa4c80692343f9649772722.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
